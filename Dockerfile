@@ -49,6 +49,12 @@ ENV DOCKER_AVAILABLE=1
 
 # ------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------ VCS
+
+RUN yum install -y git subversion
+ENV GIT_AVAILABLE=1
+ENV SVN_AVAILABLE=1
+
 EXPOSE ${AGENT_PORT}
 VOLUME /srv/teamcity-agent/conf
 USER app
