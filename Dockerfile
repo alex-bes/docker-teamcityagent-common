@@ -41,10 +41,10 @@ RUN (curl -L http://www.us.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries
 ENV M2_HOME /opt/apache-maven
 ENV MAVEN_OPTS -Xmx512m -Xss256k -XX:+UseCompressedOops
 
-# ------------------------------------------------------------------------ docker
+# ------------------------------------------------------------------------ docker & aws
 
 RUN yum install -y docker python-devel gcc && yum clean all \
-    && pip install docker-compose maestro-ng
+    && pip install docker-compose maestro-ng awscli
 ENV DOCKER_AVAILABLE=1
 
 # ------------------------------------------------------------------------
