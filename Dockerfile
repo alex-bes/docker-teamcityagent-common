@@ -34,7 +34,7 @@ RUN (curl -L http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux
  && npm install -g node-gyp grunt grunt-cli karma-cli bower aglio
 
 # ------------------------------------------------------------------------ maven
-ENV MAVEN_VERSION 3.3.3
+ENV MAVEN_VERSION 3.3.9
 
 RUN (curl -L http://www.us.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | gunzip -c | tar x) \
  && mv apache-maven-$MAVEN_VERSION /opt/apache-maven
