@@ -48,7 +48,7 @@ RUN yum install -y docker python-devel gcc && yum clean all \
     && pip install docker-compose maestro-ng awscli
 ENV DOCKER_AVAILABLE=1
 
-RUN groupadd docker && usermod -aG docker app 
+RUN groupadd docker && usermod -aG root app 
 
 # ------------------------------------------------------------------------
 
