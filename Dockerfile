@@ -60,6 +60,6 @@ ENV SVN_AVAILABLE=1
 
 EXPOSE ${AGENT_PORT}
 VOLUME /srv/teamcity-agent/conf
-USER app
+USER root
 
 CMD ["/srv/start-agent.sh"]
