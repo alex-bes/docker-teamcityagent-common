@@ -55,6 +55,7 @@ RUN groupadd docker && usermod -aG root app
 # ------------------------------------------------------------------------ VCS
 
 RUN yum install -y git subversion
+RUN yum install -y jq
 ENV GIT_AVAILABLE=1
 ENV SVN_AVAILABLE=1
 
